@@ -1,10 +1,11 @@
 module Messenger
   module Elements
     class Text
-      attr_accessor :text
+      attr_accessor :text, :quick_replies
 
-      def initialize(text:)
+      def initialize(text:, quick_replies: [])
         @text = text
+        @quick_replies = quick_replies
       end
 
       def build
