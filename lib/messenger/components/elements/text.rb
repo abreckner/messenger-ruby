@@ -3,9 +3,11 @@ module Messenger
     class Text
       attr_accessor :text, :quick_replies
 
-      def initialize(text:, quick_replies: [])
+      def initialize(text:, quick_replies: nil)
         @text = text
-        @quick_replies = quick_replies
+        if quick_replies.present?
+          @quick_replies = quick_replies
+        end
       end
 
       def build
